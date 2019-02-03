@@ -6,7 +6,7 @@ output: html_document
 ---
 
 ```{r echo=FALSE}
-means.tidy.dat <- read.table("C://Users//BrendaCarolina//Desktop//Coursera//CleaningCourse//deliverables//means.tidy.dat.txt", header=TRUE)
+means.tidy.dat <- read.table(".//deliverables//means.tidy.dat.txt", header=TRUE)
 ```
 
 ## Description

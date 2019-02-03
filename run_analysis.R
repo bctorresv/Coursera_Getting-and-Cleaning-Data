@@ -7,6 +7,8 @@
 # were used to get a tidy dataset as deliverable.
   
 # Libraries 
+
+
 library("dplyr", lib.loc="~/R/win-library/3.4")
 
 # ***********************************************************************
@@ -29,19 +31,19 @@ library("dplyr", lib.loc="~/R/win-library/3.4")
 # - 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30.
  
 # Reading in training datasets
-subject.train <-  read.table("C://Users//BrendaCarolina//Desktop//Coursera//CleaningCourse//Datasets//train//subject_train.txt",  header = FALSE)
-X.train       <-  read.table("C://Users//BrendaCarolina//Desktop//Coursera//CleaningCourse//Datasets//train//X_train.txt", header = FALSE)
-y.train       <-  read.table("C://Users//BrendaCarolina//Desktop//Coursera//CleaningCourse//Datasets//train//y_train.txt", header = FALSE)
+subject.train <-  read.table(".//Datasets//train//subject_train.txt",  header = FALSE)
+X.train       <-  read.table(".//Datasets//train//X_train.txt", header = FALSE)
+y.train       <-  read.table(".//Datasets//train//y_train.txt", header = FALSE)
 
 
 # Reading in test datasets
-subject.test <-  read.table("C://Users//BrendaCarolina//Desktop//Coursera//CleaningCourse//Datasets//test//subject_test.txt", header = FALSE)
-X.test       <-  read.table("C://Users//BrendaCarolina//Desktop//Coursera//CleaningCourse//Datasets//test//X_test.txt",       header = FALSE)
-y.test       <-  read.table("C://Users//BrendaCarolina//Desktop//Coursera//CleaningCourse//Datasets//test//y_test.txt",       header = FALSE)
+subject.test <-  read.table(".//Datasets//test//subject_test.txt", header = FALSE)
+X.test       <-  read.table(".//Datasets//test//X_test.txt",       header = FALSE)
+y.test       <-  read.table(".//Datasets//test//y_test.txt",       header = FALSE)
 
 # Reading in additional info
-activity.levels <-  read.table("C://Users//BrendaCarolina//Desktop//Coursera//CleaningCourse//Datasets//activity_labels.txt", header = FALSE)
-features        <-  read.table("C://Users//BrendaCarolina//Desktop//Coursera//CleaningCourse//Datasets//features.txt",        header = FALSE)
+activity.levels <-  read.table(".//Datasets//activity_labels.txt", header = FALSE)
+features        <-  read.table(".//Datasets//features.txt",        header = FALSE)
 
 # Exploring dimension of datasets
 
@@ -224,6 +226,6 @@ means.tidy.dat <- means.tidy.dat[order(means.tidy.dat$ID.sub, means.tidy.dat$ID.
 means.tidy.dat <- means.tidy.dat %>% select(ID.sub, ID.activity, name.activity, everything())
 
 # Exporting final tidy dataset requested
-write.table(means.tidy.dat, "C://Users//BrendaCarolina//Desktop//Coursera//CleaningCourse///deliverables//means.tidy.dat.txt", row.name=FALSE)
+write.table(means.tidy.dat, ".//deliverables//means.tidy.dat.txt", row.name=FALSE)
 
 # End of project
