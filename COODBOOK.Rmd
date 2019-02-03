@@ -1,0 +1,31 @@
+---
+title: "CODEBOOK"
+author: "Brenda Torres-Velasquez"
+date: "February 2, 2019"
+output: html_document
+---
+
+```{r echo=FALSE}
+means.tidy.dat <- read.table("C://Users//BrendaCarolina//Desktop//Coursera//CleaningCourse//deliverables//means.tidy.dat.txt", header=TRUE)
+```
+
+## Description
+This is a code book, or data dictionary, created to list and briefly describe variables in **tidy.mean.dat** dataset.
+
+### Identifiers
+These variables identify the subject and the activity for each other measurement in tidy dataset.
+
+* **ID.sub:** identifies the ID for the subject in the study.
+
+* **ID.activity:** identifies the ID for the activity in the study.
+
+* **name.activity:** represent the names for each activity ID.
+
+### Other variables
+These variables represent the mean of the corresponding measurements by subject ID by activity. 
+
+```{r echo=FALSE}
+cat(ls(means.tidy.dat), sep='\n')
+```
+
+
